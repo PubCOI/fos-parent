@@ -31,6 +31,8 @@
 
         <version.spring-boot-starter>1.0.2.RELEASE</version.spring-boot-starter>
         <version.spring-boot-dependencies>2.3.6.RELEASE</version.spring-boot-dependencies>
+        <version.spring-batch>1.3.1.RELEASE</version.spring-batch>
+
         <version.tika>1.25</version.tika>
         <version.docker-java>3.2.7</version.docker-java>
         <version.aws-sdk>1.11.960</version.aws-sdk>
@@ -56,14 +58,19 @@
                 <version>${version.pubcoi-fos}</version>
             </dependency>
             <dependency>
-                <groupId>com.google.firebase</groupId>
-                <artifactId>firebase-admin</artifactId>
-                <version>6.16.0</version>
+                <groupId>org.pubcoi.fos</groupId>
+                <artifactId>fos-batch</artifactId>
+                <version>${version.pubcoi-fos}</version>
             </dependency>
             <dependency>
                 <groupId>org.pubcoi.fos</groupId>
                 <artifactId>fos-depends-aspects</artifactId>
                 <version>${version.pubcoi-fos}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.google.firebase</groupId>
+                <artifactId>firebase-admin</artifactId>
+                <version>6.16.0</version>
             </dependency>
             <dependency>
                 <groupId>org.apache.httpcomponents</groupId>
@@ -120,8 +127,14 @@
                 <artifactId>pdfbox</artifactId>
                 <version>${version.pdfbox}</version>
             </dependency>
+            <dependency>
+                <groupId>org.springframework.batch</groupId>
+                <artifactId>spring-batch-admin-resources</artifactId>
+                <version>${version.spring-batch}</version>
+            </dependency>
         </dependencies>
     </dependencyManagement>
+
     <build>
         <pluginManagement><!-- lock down plugins versions to avoid using Maven defaults (may be moved to parent pom) -->
             <plugins>
@@ -166,5 +179,36 @@
                 </plugin>
             </plugins>
         </pluginManagement>
+
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-gpg-plugin</artifactId>
+                <version>1.6</version>
+                <executions>
+                    <execution>
+                        <id>sign-artifacts</id>
+                        <phase>verify</phase>
+                        <goals>
+                            <goal>sign</goal>
+                        </goals>
+                        <configuration>
+                            <keyname>info@pubcoi.org</keyname>
+                        </configuration>
+                    </execution>
+                </executions>
+            </plugin>
+        </plugins>
     </build>
+
+    <distributionManagement>
+        <snapshotRepository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/content/repositories/snapshots</url>
+        </snapshotRepository>
+        <repository>
+            <id>ossrh</id>
+            <url>https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/</url>
+        </repository>
+    </distributionManagement>
 </project>
