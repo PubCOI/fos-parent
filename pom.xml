@@ -4,7 +4,7 @@
 
     <groupId>org.pubcoi.fos</groupId>
     <artifactId>parent</artifactId>
-    <version>1.1-SNAPSHOT</version>
+    <version>1.0.1-SNAPSHOT</version>
     <packaging>pom</packaging>
 
     <name>parent</name>
@@ -52,7 +52,7 @@
         <version.aws-sdk>1.11.960</version.aws-sdk>
         <version.pdfbox>2.0.22</version.pdfbox>
 
-        <version.pubcoi-fos>1.0-SNAPSHOT</version.pubcoi-fos>
+        <version.pubcoi-fos>1.0.1</version.pubcoi-fos>
 
         <!-- plugin-specific parameters -->
         <maven-compiler-plugin.source-version>1.8</maven-compiler-plugin.source-version>
