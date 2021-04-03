@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>org.pubcoi.fos</groupId>
@@ -20,8 +21,8 @@
         <connection>scm:git:git@github.com:PubCOI/fos-parent.git</connection>
         <developerConnection>scm:git:git@github.com:PubCOI/fos-parent.git</developerConnection>
         <url>https://github.com/PubCOI/fos-parent</url>
-      <tag>HEAD</tag>
-  </scm>
+        <tag>HEAD</tag>
+    </scm>
 
     <licenses>
         <license>
@@ -42,6 +43,8 @@
         <version.jaxb2-maven-plugin>2.5.0</version.jaxb2-maven-plugin>
         <version.jaxb2-basics>1.11.1</version.jaxb2-basics>
         <version.jaxb2-fluent-api>3.0</version.jaxb2-fluent-api>
+        <version.jtexttime>1.2.0</version.jtexttime>
+        <version.jaxb-impl>2.1</version.jaxb-impl>
 
         <version.spring-boot-starter>1.0.2.RELEASE</version.spring-boot-starter>
         <version.spring-boot-dependencies>2.3.6.RELEASE</version.spring-boot-dependencies>
@@ -54,6 +57,9 @@
 
         <version.pubcoi-fos>1.0.1</version.pubcoi-fos>
 
+        <version.nexus-staging-maven-plugin>1.6.7</version.nexus-staging-maven-plugin>
+        <version.maven-gpg-plugin>1.6</version.maven-gpg-plugin>
+
         <!-- plugin-specific parameters -->
         <maven-compiler-plugin.source-version>1.8</maven-compiler-plugin.source-version>
         <maven-compiler-plugin.target-version>1.8</maven-compiler-plugin.target-version>
@@ -61,11 +67,6 @@
 
     <dependencyManagement>
         <dependencies>
-            <dependency>
-                <groupId>org.pubcoi</groupId>
-                <artifactId>schema</artifactId>
-                <version>${version.pubcoi-fos}</version>
-            </dependency>
             <dependency>
                 <groupId>org.pubcoi.fos</groupId>
                 <artifactId>fos-cdm</artifactId>
@@ -94,12 +95,12 @@
             <dependency>
                 <groupId>javax.xml</groupId>
                 <artifactId>jaxb-impl</artifactId>
-                <version>2.1</version>
+                <version>${version.jaxb-impl}</version>
             </dependency>
             <dependency>
                 <groupId>com.addicticks.oss</groupId>
                 <artifactId>jtexttime</artifactId>
-                <version>1.2.0</version>
+                <version>${version.jtexttime}</version>
             </dependency>
             <dependency>
                 <groupId>org.jvnet.jaxb2_commons</groupId>
@@ -189,7 +190,7 @@
                 </plugin>
                 <plugin>
                     <artifactId>maven-project-info-reports-plugin</artifactId>
-                    <version>3.0.0</version>
+                    <version>3.1.1</version>
                 </plugin>
             </plugins>
         </pluginManagement>
