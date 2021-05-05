@@ -289,7 +289,7 @@
                 <plugin>
                     <groupId>com.github.eirslett</groupId>
                     <artifactId>frontend-maven-plugin</artifactId>
-                    <version>${frontend-maven-plugin}</version>
+                    <version>${version.frontend-maven-plugin}</version>
                 </plugin>
             </plugins>
         </pluginManagement>
