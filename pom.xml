@@ -47,7 +47,7 @@
         <version.debatty-str>2.0.0</version.debatty-str>
 
         <version.spring-batch-admin>1.3.1.RELEASE</version.spring-batch-admin>
-        <version.spring-data-mongodb>3.2.0</version.spring-data-mongodb>
+        <version.spring-data-mongodb>3.3.5</version.spring-data-mongodb>
         <version.spring-data-neo4j>6.1.0</version.spring-data-neo4j>
 
         <version.tika>1.26</version.tika>
