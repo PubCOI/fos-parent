@@ -53,7 +53,7 @@
         <version.tika>1.26</version.tika>
         <version.docker-java>3.2.8</version.docker-java>
         <version.aws-sdk>1.11.1004</version.aws-sdk>
-        <version.pdfbox>2.0.23</version.pdfbox>
+        <version.pdfbox>2.0.24</version.pdfbox>
 
         <version.pubcoi-fos>1.0.2-SNAPSHOT</version.pubcoi-fos>
 
